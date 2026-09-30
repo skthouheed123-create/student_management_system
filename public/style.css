@@ -1,0 +1,215 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #111411;
+    --card: #1b201b;
+    --card-hover: #222a20;
+    --accent: #c7f36b;
+    --accent-dark: #a6d84d;
+    --text: #f1f5e9;
+    --muted: #a7b09e;
+    --border: #394532;
+    --danger: #ff7272;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(ellipse at 15% 5%,
+            #283321 0%, transparent 40%),
+        var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2 {
+    color: var(--text);
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--muted);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card, .dashboard-card {
+    background: rgba(27, 32, 27, 0.96);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.25);
+    margin-bottom: 24px;
+}
+
+.dashboard-card {
+    text-align: left;
+    transition: transform .25s, border-color .25s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+a, button {
+    display: inline-block;
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: var(--accent);
+    color: #18200d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+a:hover, button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+form {
+    margin-top: 18px;
+}
+
+label {
+    display: block;
+    color: #d5decf;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #131713;
+    color: var(--text);
+    font-size: 15px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #778171;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(199,243,107,.12);
+}
+
+form button {
+    margin-top: 5px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    margin-top: 0;
+}
+
+th {
+    background: #252d22;
+    color: var(--accent);
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    color: #e1e8db;
+}
+
+tr:hover td {
+    background: var(--card-hover);
+}
+
+td a {
+    margin: 3px;
+}
+
+td form {
+    display: inline;
+    margin: 0;
+}
+
+td form button {
+    background: #3a2020;
+    color: var(--danger);
+    border: 1px solid #693737;
+    padding: 9px 13px;
+    margin: 3px;
+}
+
+td form button:hover {
+    background: #582727;
+}
+
+.home-link {
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .card, .dashboard-card {
+        padding: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}

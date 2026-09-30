@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .welcome {
+            text-align: center;
+            padding: 45px 25px;
+            background: linear-gradient(135deg, #1d4ed8, #6366f1);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 25px;
+        }
+
+        .welcome h1 {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .welcome p {
+            color: #e0e7ff;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .dashboard-card {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .dashboard-card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+
+        .dashboard-card p {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-card a {
+            width: 100%;
+        }
+
+        .footer {
+            text-align: center;
+            color: #64748b;
+            margin-top: 30px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="welcome">
+            <h1>CRUD Application</h1>
+            <p>Manage your users easily and efficiently.</p>
+        </div>
+
+        <div class="dashboard">
+            <div class="dashboard-card">
+                <h2>Add User</h2>
+                <p>Create a new user with name and email.</p>
+                <a href="/add.html">+ Add User</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>View Users</h2>
+                <p>View, edit and delete registered users.</p>
+                <a href="/users">View All Users</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>CRUD Application | Node.js & MySQL</p>
+        </div>
+
+    </div>
+</body>
+</html>
