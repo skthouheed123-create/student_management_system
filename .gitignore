@@ -26,3 +26,11 @@ desktop.ini
 *.tmp
 *.swp
 *.swo
+
+
+
+node_modules/
+.env
+ca.pem
+migrate.js
+test-db.js
